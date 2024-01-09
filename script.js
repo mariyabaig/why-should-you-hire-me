@@ -129,7 +129,7 @@ document.querySelector(".download-btn").style.display = "none";
 const messages = [
   {
     text: "What's taking you so long?",
-    gif: "https://media.giphy.com/media/mCgALMhfxiZn4oz5P5/giphy.gif",
+    gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW1mZWo0OWE1cTR2bjlnamZoeHh1cXZicTI1b283bWc5NHp4c3hwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZVyTo5qi5E0qGGXWl7/giphy.gif",
   },
   {
     text: "I'm skilled in JavaScript, React.js, Next.js & TypeScript.",

@@ -68,6 +68,7 @@ elements.yesBtn.addEventListener("click", () => {
     "https://media.giphy.com/media/4RJBOuC45ptdMszWvt/giphy.gif";
   elements.yesBtn.style.display = "none";
   elements.noBtn.style.display = "none";
+  document.querySelector(".download-btn").style.display = "none";
 });
 
 elements.noBtn.addEventListener("mouseover", () => {

@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(function () {
     gifImage.src = "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
-    question.innerHTML = "Won't you?";
+    question.innerHTML = "Do you not want to?";
 
     setTimeout(function () {
       gifImage.src =

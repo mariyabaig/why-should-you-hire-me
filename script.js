@@ -103,6 +103,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const gifImage = elements.gif;
+  const question = elements.question;
+  document.querySelector(".download-btn").style.display = "none";
+
+  setTimeout(function () {
+    gifImage.src = "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
+    question.innerHTML = "Okay enough";
+  }, 39000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const gifImage = elements.gif;
+  const question = elements.question;
+document.querySelector(".download-btn").style.display = "none";
+  setTimeout(function () {
+    gifImage.src = "https://media.giphy.com/media/lr3SLEcUAVlU0TTmrz/giphy.gif";
+    question.innerHTML = "Say yes please!!";
+    elements.noBtn.style.display = "none";
+    document.querySelector(".download-btn").style.display = "block";
+  }, 40000);
+});
+
 const messages = [
   {
     text: "What's taking you so long?",

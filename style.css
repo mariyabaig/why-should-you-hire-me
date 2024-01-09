@@ -164,3 +164,25 @@ button:nth-child(2) {
   margin-bottom: 200px;
 
 }
+ .download-btn{
+  position: absolute;
+  top: 47%;
+ }
+
+.notepad {
+  width: 120px;
+  box-shadow: 10px 10px 40px rgba(black, .15);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.paper {
+  width: 120px;
+  height: 180px;
+  padding: 25px 10px;
+  background: repeating-linear-gradient( #F1EDE9,  #F1EDE9 31px, #94ACD4 31px, #94ACD4 32px);
+  font-family: 'Shadows Into Light', cursive;
+  line-height: 22px;
+  outline: 0;
+  font-size: 12px;
+}

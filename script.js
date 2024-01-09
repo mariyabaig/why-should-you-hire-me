@@ -12,7 +12,7 @@ const elements = {
     document.querySelector(".message-container-sixth"),
   ],
 };
-
+let yesButtonClicked = false;
 const timeouts = [];
 
 const maxScreenTimes = [2000, 8000, 8000, 2000, 3000, 8000];
@@ -82,17 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const question = elements.question;
 
   setTimeout(function () {
-    gifImage.src = "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
-    question.innerHTML = "Do you not want to?";
-
-    setTimeout(function () {
+    if (!yesButtonClicked) {
       gifImage.src =
-        "https://media.giphy.com/media/hiJ9ypGI5tIKdwKoK2/giphy.gif";
+        "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
+      question.innerHTML = "Do you not want to?";
 
       setTimeout(function () {
-        question.innerHTML = "Let me<br>tell you why you should!";
+        if (!yesButtonClicked) {
+          gifImage.src =
+            "https://media.giphy.com/media/hiJ9ypGI5tIKdwKoK2/giphy.gif";
+
+          setTimeout(function () {
+            if (!yesButtonClicked) {
+              question.innerHTML = "Let me<br>tell you why you should!";
+            }
+          }, 2000);
+        }
       }, 2000);
-    }, 2000);
+    }
   }, 3000);
 });
 
@@ -102,39 +109,52 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".download-btn").style.display = "none";
 
   setTimeout(function () {
-    gifImage.src = "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
-    question.innerHTML = "Okay enough";
+    if (!yesButtonClicked) {
+      gifImage.src =
+        "https://media.giphy.com/media/BmfDRHdpLw6sszpKp9/giphy.gif";
+      question.innerHTML = "Okay enough";
+    }
   }, 39000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const gifImage = elements.gif;
   const question = elements.question;
-document.querySelector(".download-btn").style.display = "none";
+  document.querySelector(".download-btn").style.display = "none";
+
   setTimeout(function () {
-    gifImage.src = "https://media.giphy.com/media/lr3SLEcUAVlU0TTmrz/giphy.gif";
-    question.innerHTML = "Say yes please!!";
-    elements.noBtn.style.display = "none";
-    document.querySelector(".download-btn").style.display = "block";
+    if (!yesButtonClicked) {
+      gifImage.src =
+        "https://media.giphy.com/media/lr3SLEcUAVlU0TTmrz/giphy.gif";
+      question.innerHTML = "Say yes please!!";
+      elements.noBtn.style.display = "none";
+      document.querySelector(".download-btn").style.display = "block";
+    }
   }, 40000);
 });
 
-elements.yesBtn.addEventListener("click", () => {
-  clearAllTimeouts();
 
-  elements.question.innerHTML = "Yayy, thank you!";
-  elements.gif.src =
-    "https://media.giphy.com/media/4RJBOuC45ptdMszWvt/giphy.gif";
-  elements.yesBtn.style.display = "none";
-  elements.noBtn.style.display = "none";
-  document.querySelector(".download-btn").style.display = "none";
-  setTimeout(() => {
-    elements.question.innerHTML = "PEEEAAACH! Get up from my laptop!";
+elements.yesBtn.addEventListener("click", () => {
+  if (!yesButtonClicked) {
+    yesButtonClicked = true;
+    clearAllTimeouts();
+
+    elements.question.innerHTML = "Yayy, thank you!";
     elements.gif.src =
-      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2t6ZWU0Z3h5dWMzYm9jYjBxcHNxZnN3cnFkNjFmbXF1aDdkYjRxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YYQ6sw8jt2HRxX4uVi/giphy.gif";
-    document.querySelector(".screaming").style.display = "block";
-  }, 2000);
+      "https://media.giphy.com/media/4RJBOuC45ptdMszWvt/giphy.gif";
+    elements.yesBtn.style.display = "none";
+    elements.noBtn.style.display = "none";
+    document.querySelector(".download-btn").style.display = "none";
+
+    setTimeout(() => {
+      elements.question.innerHTML = "PEEEAAACH! Get up from my laptop!";
+      elements.gif.src =
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2t6ZWU0Z3h5dWMzYm9jYjBxcHNxZnN3cnFkNjFmbXF1aDdkYjRxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YYQ6sw8jt2HRxX4uVi/giphy.gif";
+      document.querySelector(".screaming").style.display = "block";
+    }, 2000);
+  }
 });
+
 
 const messages = [
   {

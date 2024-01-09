@@ -44,6 +44,7 @@ function showMessage(messageText, gifSrc, containerIndex) {
   }
 }
 
+
 function clearAllTimeouts() {
   timeouts.forEach(clearTimeout);
   elements.messageContainers.forEach(
@@ -61,15 +62,6 @@ function startTimeoutMessage() {
   }, 0);
 }
 
-elements.yesBtn.addEventListener("click", () => {
-  clearAllTimeouts();
-  elements.question.innerHTML = "Yayy, thank you!";
-  elements.gif.src =
-    "https://media.giphy.com/media/4RJBOuC45ptdMszWvt/giphy.gif";
-  elements.yesBtn.style.display = "none";
-  elements.noBtn.style.display = "none";
-  document.querySelector(".download-btn").style.display = "none";
-});
 
 elements.noBtn.addEventListener("mouseover", () => {
   const noBtnRect = elements.noBtn.getBoundingClientRect();
@@ -125,6 +117,23 @@ document.querySelector(".download-btn").style.display = "none";
     elements.noBtn.style.display = "none";
     document.querySelector(".download-btn").style.display = "block";
   }, 40000);
+});
+
+elements.yesBtn.addEventListener("click", () => {
+  clearAllTimeouts();
+
+  elements.question.innerHTML = "Yayy, thank you!";
+  elements.gif.src =
+    "https://media.giphy.com/media/4RJBOuC45ptdMszWvt/giphy.gif";
+  elements.yesBtn.style.display = "none";
+  elements.noBtn.style.display = "none";
+  document.querySelector(".download-btn").style.display = "none";
+  setTimeout(() => {
+    elements.question.innerHTML = "PEEEAAACH! Get up from my laptop!";
+    elements.gif.src =
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2t6ZWU0Z3h5dWMzYm9jYjBxcHNxZnN3cnFkNjFmbXF1aDdkYjRxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YYQ6sw8jt2HRxX4uVi/giphy.gif";
+    document.querySelector(".screaming").style.display = "block";
+  }, 2000);
 });
 
 const messages = [

@@ -65,7 +65,7 @@ button:nth-child(2) {
     width: 374px;
     right: 0;
     transform: translateY(-50%);
-    background-color: rgb(253, 255, 204);
+    /* background-color: rgb(253, 255, 204); */
     color: #380303;
     
     border-radius: 0 10px 10px 0;
@@ -81,7 +81,7 @@ button:nth-child(2) {
   width: 374px;
   left: 10%; 
   transform: translateY(-50%);
-  background-color: rgb(253, 255, 204);
+  /* background-color: rgb(253, 255, 204); */
   color: #380303;
   
   border-radius: 10px 0 0 10px;
@@ -129,7 +129,7 @@ button:nth-child(2) {
     width: 374px;
     right: 0;
     transform: translateY(-50%);
-    background-color: rgb(253, 255, 204);
+    /* background-color: rgb(253, 255, 204); */
     color: #380303;
     
     border-radius: 0 10px 10px 0;
@@ -154,7 +154,7 @@ button:nth-child(2) {
   width: 374px;
   left: 10%; 
   transform: translateY(-50%);
-  background-color: rgb(253, 255, 204);
+  /* background-color: rgb(253, 255, 204); */
   color: #380303;
   border-radius: 10px 0 0 10px;
   animation: slide-in-left 0.5s forwards;
@@ -190,4 +190,11 @@ button:nth-child(2) {
     position: absolute;
     top: 6%;
     right: 1%;
+}
+
+.mariya{
+  position: absolute;
+  top: 7%;
+  left: 3%;
+   color: #380303;
 }

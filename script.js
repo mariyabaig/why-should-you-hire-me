@@ -178,7 +178,7 @@ elements.yesBtn.addEventListener("click", () => {
       elements.gif.src =
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2t6ZWU0Z3h5dWMzYm9jYjBxcHNxZnN3cnFkNjFmbXF1aDdkYjRxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YYQ6sw8jt2HRxX4uVi/giphy.gif";
       document.querySelector(".screaming").style.display = "block";
-    }, 3000);
+    }, 4000);
   }
 });
 
@@ -197,11 +197,11 @@ const messages = [
     gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjJ0bzY5cTBxYW4wb3F1dWtqZGxndm8xcHY5ZHh0NmJwa2c0enRoMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/NB5Ato4gbETeE6SkKh/giphy.gif",
   },
   {
-    text: "I am also very hardworking",
+    text: "I am also very hardworking.",
     gif: "https://media.giphy.com/media/gFisgTI9VHKN6gUAnv/giphy.gif",
   },
   {
-    text: "I loooove networking with people as well!",
+    text: "I loooove networking and making new friends as well!",
     gif: "https://media.giphy.com/media/UhdWrWgDPiRUjiNyRZ/giphy.gif",
   },
   {

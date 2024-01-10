@@ -163,7 +163,8 @@ button:nth-child(2) {
 }
  .download-btn{
   position: absolute;
-  top: 47%;
+  top: 57%;
+  left: 50%;
  }
 
 .notepad {
@@ -175,7 +176,7 @@ button:nth-child(2) {
 
 .paper {
   width: 120px;
-  height: 180px;
+  height: 165px;
   padding: 25px 10px;
   background: repeating-linear-gradient( #F1EDE9,  #F1EDE9 31px, #94ACD4 31px, #94ACD4 32px);
   font-family: 'Shadows Into Light', cursive;
